@@ -72,6 +72,9 @@ catch (Exception ex)
     {
         logWriter.WriteLine(ex);
     }
+
+    Console.WriteLine("Crash details recorded in CrashLog.txt file");
+    Console.WriteLine("");
     CmnMethods.ErrorExit("" + ex);
 }
 
