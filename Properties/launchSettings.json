@@ -1,0 +1,28 @@
+{
+  "profiles": {
+    "unpack_pc": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -d \"S:\\New folder\\atlas_pc_Zlib.pac\""
+    },
+    "repack_pc": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -c \"S:\\New folder\\atlas_pc_Zlib\" \"S:\\New folder\\atlas_pc_Zlib.pac\""
+    },
+    "unpack_pc_ps2": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -d \"S:\\New folder\\atlas_pc_jp_Zlib_ps2.pac\""
+    },
+    "repack_pc_ps2": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -c \"S:\\New folder\\atlas_pc_jp_Zlib_ps2\" \"S:\\New folder\\atlas_pc_jp_Zlib_ps2.pac\""
+    },
+    "unpack_ps4_ps2": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -d \"S:\\New folder\\atlas_ps4_jp_Zlib_ps2.pac\""
+    },
+    "repack_ps4_ps2": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -c \"S:\\New folder\\atlas_ps4_jp_Zlib_ps2\" \"S:\\New folder\\atlas_ps4_jp_Zlib_ps2.pac\""
+    }
+  }
+}
