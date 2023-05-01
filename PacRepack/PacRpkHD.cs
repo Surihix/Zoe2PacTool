@@ -2,7 +2,7 @@
 
 namespace Zoe2PacTool.PacRepack
 {
-    internal class RepackHD
+    internal class PacRpkHD
     {
         public static void ArchiveHd(string inFolderVar, string inPacFileVar)
         {

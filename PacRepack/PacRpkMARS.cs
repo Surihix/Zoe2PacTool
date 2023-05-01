@@ -2,7 +2,7 @@
 
 namespace Zoe2PacTool.PacRepack
 {
-    internal class RepackMARS
+    internal class PacRpkMARS
     {
         public static void ArchiveMars(string inFolderVar, string inPacFileVar)
         {

@@ -54,11 +54,11 @@ try
             switch (gameVersion)
             {
                 case CmnEnums.VersionsList.mars:
-                    RepackMARS.ArchiveMars(inFileFolder, inPacFile);
+                    PacRpkMARS.ArchiveMars(inFileFolder, inPacFile);
                     break;
 
                 case CmnEnums.VersionsList.hd:
-                    RepackHD.ArchiveHd(inFileFolder, inPacFile);
+                    PacRpkHD.ArchiveHd(inFileFolder, inPacFile);
                     break;
             }
             break;
