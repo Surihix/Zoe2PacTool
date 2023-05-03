@@ -49,6 +49,5 @@ additional 4 bytes (uint32) with the uncompressed size value would be present be
 version's pac file, this value has to be read in Big Endian.
 - MARS version uses Zlib compression, while the HD collection version uses raw Deflate. 
 - In the MARS version, there are .tbl files stored along with the texture files and only the texture file's data is compressed. but this may not always be 
-consistent as the pac file from PS4 version's does not have some of the texture file's data compressed. 
-During unpacking and repacking this tool checks if the zlib header is present 4 bytes after the data and then proceeds to either decompress or compress 
+consistent as the pac file from PS4 version's does not have some of the texture file's data compressed. during unpacking and repacking this tool checks if the zlib header is present 4 bytes after the data and then proceeds to either decompress or compress 
 the data.
