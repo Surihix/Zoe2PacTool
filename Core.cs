@@ -23,7 +23,7 @@ try
         CmnMethods.ErrorExit("Specified game version was invalid. has to be either -mars or -hd");
     }
 
-    var toolAction = ToolActionSwitches.d;
+    var toolAction = ToolActionSwitches.r;
     if (Enum.TryParse(specifiedAction, false, out ToolActionSwitches convertedToolAction))
     {
         toolAction = convertedToolAction;
@@ -35,13 +35,13 @@ try
 
     switch (toolAction)
     {
-        case ToolActionSwitches.d:
+        case ToolActionSwitches.r:
             CmnMethods.FileFolderExistsCheck(inFileFolder, CmnEnums.ExistsCheckType.file);
             CmnMethods.ValidityCheck(inFileFolder);
             PacUnpack.ArchiveUnpack(inFileFolder, gameVersion);
             break;
 
-        case ToolActionSwitches.c:
+        case ToolActionSwitches.u:
             if (args.Length < 4)
             {
                 CmnMethods.ErrorExit("atlas pac file to repack is not specified in the argument. specify this file along with the extracted folder");
@@ -80,6 +80,6 @@ catch (Exception ex)
 
 enum ToolActionSwitches
 {
-    c,
-    d
+    u,
+    r
 }
