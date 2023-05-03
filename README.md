@@ -15,4 +15,4 @@ file. so make sure to specify the correct switch according to the game version f
 **Note:** When repacking a file, you have to provide the old .pac file after the extracted folder name. remember that the extracted folder should contain all of the files that were extracted from the old .pac file and even if one file is missing, this tool will not repack the .pac file. if the repacking succeeds, you will get a new .pac file with the .new extension to it and you have rename the file to .pac to use it with the game.
 
 ## For Developers:
-<br>Refer to the format structure of the .pac file from [here](FormatStruct.md).
+Refer to the format structure of the .pac file from [here](FormatStruct.md).
