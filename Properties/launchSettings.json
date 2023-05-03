@@ -23,6 +23,14 @@
     "repack_ps4_ps2": {
       "commandName": "Project",
       "commandLineArgs": "-mars -r \"S:\\New folder\\atlas_ps4_jp_Zlib_ps2\" \"S:\\New folder\\atlas_ps4_jp_Zlib_ps2.pac\""
+    },
+    "repack_ps3": {
+      "commandName": "Project",
+      "commandLineArgs": "-hd -r \"S:\\New folder\\atlas_ps3_Zlib\" \"S:\\New folder\\atlas_ps3_Zlib.pac\""
+    },
+    "unpack_ps3": {
+      "commandName": "Project",
+      "commandLineArgs": "-hd -u \"S:\\New folder\\atlas_ps3_Zlib.pac\""
     }
   }
 }

@@ -73,6 +73,13 @@ namespace Zoe2PacTool.PacRepack
                             var fileNamesSize = fileTableStartPos - fileNamesStartPos;
                             pacFileStreamVar.CopyTo(fileNames, fileNamesStartPos, fileNamesSize);
 
+                            Console.WriteLine("Checking extracted files....");
+                            string[] extractedDirToCheck = Directory.GetFiles(extractedDirVar, "*.*", SearchOption.TopDirectoryOnly);
+                            
+                            CmnMethods.CheckExtractedFiles(extractedDirToCheck, totalFileCountVar, fileNamesReader);
+                            Console.WriteLine("Finished checking extracted files");
+                            Console.WriteLine("");
+
                             using (MemoryStream fileTable = new())
                             {
                                 using (BinaryReader fileTableReader = new(fileTable))
@@ -203,6 +210,13 @@ namespace Zoe2PacTool.PacRepack
                         {
                             var fileNamesSize = fileTableStartPos - fileNamesStartPos;
                             pacFileStreamVar.CopyTo(fileNames, (long)fileNamesStartPos, (long)fileNamesSize);
+
+                            Console.WriteLine("Checking extracted files....");
+                            string[] extractedDirToCheck = Directory.GetFiles(extractedDirVar, "*.*", SearchOption.TopDirectoryOnly);
+
+                            CmnMethods.CheckExtractedFiles(extractedDirToCheck, totalFileCountVar, fileNamesReader);
+                            Console.WriteLine("Finished checking extracted files");
+                            Console.WriteLine("");
 
                             using (MemoryStream fileTable = new())
                             {

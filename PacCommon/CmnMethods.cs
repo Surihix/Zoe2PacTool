@@ -145,6 +145,33 @@ namespace Zoe2PacTool.PacCommon
             }
         }
 
+        public static void CheckExtractedFiles(string[] extractedDirVar, uint totalFileCountVar, BinaryReader readerNameVar)
+        {
+            var checkList = new List<string>();
+
+            foreach (var ef in extractedDirVar)
+            {
+                var currentFileInDir = Path.GetFileName(ef).Replace(".dds", ".dat").Replace(".gnf", ".dat");
+                checkList.Add(currentFileInDir);
+            }
+
+            uint readerStartPos = 0;
+            for (int i = 0; i < totalFileCountVar; i++)
+            {
+                var currentFileInPac = "";
+                GenerateString(readerNameVar, readerStartPos, 32, ref currentFileInPac);
+
+                if (!checkList.Contains(currentFileInPac))
+                {
+                    ErrorExit(currentFileInPac + " file is missing in the extracted folder");
+                }
+
+                readerStartPos += 32;
+            }
+
+            checkList.Clear();
+        }
+
         public static void WriteBytes32(CmnEnums.Endianness endiannessVar, BinaryWriter writerNameVar, uint writerPosVar, uint writeValueVar)
         {
             writerNameVar.BaseStream.Position = writerPosVar;
