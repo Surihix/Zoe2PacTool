@@ -7,6 +7,9 @@ archive file.
 Use the following commands with this tool according to the game version: 
 <br>For unpacking a file: ```Zoe2PacTool -mars -u "fileName.pac"```
 <br>For repacking a file: ```Zoe2PacTool -mars -r "extractedFolderName" "oldPacFileName.pac"```
+<br>
 
-**Note:** The supported game version switches are ```-hd``` and ```-mars```. the first switch is for the Hexadrive updated HD collection version, while the second switch is for the MARS version i.e the PC and PS4 versions of the game. when repacking a file, you have to provide the old .pac file after the extracted folder name. remember that the extracted folder should contain all of the files that were extracted from the old .pac file and even if one file is missing, 
-this tool will not repack the .pac file. if the repacking succeeds, you will get a new .pac file with the .new extension to it and you have rename the file to .pac to use it with the game.
+**Important:** The supported game version switches are ```-hd``` and ```-mars```. the first switch is for the Hexadrive updated HD collection version, while the second switch is for the MARS version i.e the PC and PS4 versions of the game. these switches are important and decide how this tool unpacks or repacks the 
+file. so make sure to specify the correct switch according to the game version from which you got the .pac file.
+
+**Note:** When repacking a file, you have to provide the old .pac file after the extracted folder name. remember that the extracted folder should contain all of the files that were extracted from the old .pac file and even if one file is missing, this tool will not repack the .pac file. if the repacking succeeds, you will get a new .pac file with the .new extension to it and you have rename the file to .pac to use it with the game.
