@@ -32,7 +32,8 @@
 | --- | --- | --- | --- |
 | 0x10 | 0x8 | UInt64 | FileNames start offset |
 | 0x18 | 0x8 | UInt64 | File table start offset |
-| 0x20 | 0x4 | UInt64 | Data start offset |
+| 0x20 | 0x8 | UInt64 | Data start offset |
+| 0x28 | 0x8 | UInt64 | Reserved, always null |
 
 #### File table section
 | Offset | Size | Type | Description |
