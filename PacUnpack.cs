@@ -121,8 +121,10 @@ namespace Zoe2PacTool
                                         {
                                             pacStreamNameVar.CopyTo(tempDataHolder, fileDataReadPos + fileStart, fileSize);
 
+                                            // hd switch will decompress with deflate. this is for
+                                            // the hd collection version
                                             switch (gameVersionVar)
-                                            {
+                                            {                                                
                                                 case CmnEnums.VersionsList.mars:
                                                     bool isZlibHeader = false;
                                                     CmnMethods.CheckZlibHeader(pacReaderNameVar, fileDataStartPos + fileStart + 4, ref isZlibHeader);
