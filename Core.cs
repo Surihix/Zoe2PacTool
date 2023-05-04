@@ -2,11 +2,31 @@
 using Zoe2PacTool.PacCommon;
 using Zoe2PacTool.PacRepack;
 
+
+static void ValidityCheck(string filePathVar)
+{
+    using (FileStream checkFile = new(filePathVar, FileMode.Open, FileAccess.Read))
+    {
+        using (BinaryReader checkFileReader = new(checkFile))
+        {
+            var zpacStr = "";
+            CmnMethods.GenerateString(checkFileReader, 0, 4, ref zpacStr);
+
+            if (!zpacStr.Contains("PAC"))
+            {
+                CmnMethods.ErrorExit("This is not a valid ZOE2 atlas pac file.");
+            }
+        }
+    }
+}
+
+
 try
 {
     if (args.Length < 3)
     {
-        CmnMethods.ErrorExit("Enough arguments not specified");
+        Console.WriteLine("Enough arguments not specified");
+        Help.ShowAppCommands();
     }
 
     var specifiedVersion = args[0].Replace("-", "");
@@ -37,7 +57,7 @@ try
     {
         case ToolActionSwitches.u:
             CmnMethods.FileFolderExistsCheck(inFileFolder, CmnEnums.ExistsCheckType.file);
-            CmnMethods.ValidityCheck(inFileFolder);
+            ValidityCheck(inFileFolder);
             PacUnpack.ArchiveUnpack(inFileFolder, gameVersion);
             break;
 
@@ -49,7 +69,7 @@ try
             var inPacFile = args[3];
             CmnMethods.FileFolderExistsCheck(inFileFolder, CmnEnums.ExistsCheckType.folder);
             CmnMethods.FileFolderExistsCheck(inPacFile, CmnEnums.ExistsCheckType.file);
-            CmnMethods.ValidityCheck(inPacFile);
+            ValidityCheck(inPacFile);
 
             switch (gameVersion)
             {

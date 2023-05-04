@@ -32,23 +32,6 @@ namespace Zoe2PacTool.PacCommon
             }
         }
 
-        public static void ValidityCheck(string filePathVar)
-        {
-            using (FileStream checkFile = new(filePathVar, FileMode.Open, FileAccess.Read))
-            {
-                using (BinaryReader checkFileReader = new(checkFile))
-                {
-                    var zpacStr = "";
-                    GenerateString(checkFileReader, 0, 4, ref zpacStr);
-
-                    if (!zpacStr.Contains("PAC"))
-                    {
-                        ErrorExit("This is not a valid ZOE2 atlas pac file.");
-                    }
-                }
-            }
-        }
-
         public static void FileFolderExistsDel(string inFileFolderVar, CmnEnums.ExistsCheckType existsCheckTypeVar)
         {
             switch (existsCheckTypeVar)

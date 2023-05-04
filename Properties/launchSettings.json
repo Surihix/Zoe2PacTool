@@ -31,6 +31,9 @@
     "unpack_ps3": {
       "commandName": "Project",
       "commandLineArgs": "-hd -u \"S:\\New folder\\atlas_ps3_Zlib.pac\""
+    },
+    "help_test": {
+      "commandName": "Project"
     }
   }
 }
