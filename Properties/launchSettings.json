@@ -2,7 +2,7 @@
   "profiles": {
     "unpack_pc": {
       "commandName": "Project",
-      "commandLineArgs": "-mars -u \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\atlas_pc_jp_Zlib_ps2.pac\""
+      "commandLineArgs": "-mars -u \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\atlas_pc_Zlib.pac\""
     },
     "repack_pc": {
       "commandName": "Project",
@@ -10,7 +10,7 @@
     },
     "unpack_pc_ps2": {
       "commandName": "Project",
-      "commandLineArgs": "-mars -u \"S:\\New folder\\atlas_pc_jp_Zlib_ps2.pac\""
+      "commandLineArgs": "-mars -u \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\atlas_pc_jp_Zlib_ps2.pac\""
     },
     "repack_pc_ps2": {
       "commandName": "Project",
@@ -18,7 +18,7 @@
     },
     "unpack_ps4_ps2": {
       "commandName": "Project",
-      "commandLineArgs": "-mars -u \"S:\\New folder\\atlas_ps4_jp_Zlib_ps2.pac\""
+      "commandLineArgs": "-mars -u \"S:\\For research\\ZOE 2\\#ps4 pkg (extracted)\\EUR\\Image0\\cdrom.img\\atlas\\atlas_ps4_jp_Zlib_ps2.pac\""
     },
     "repack_ps4_ps2": {
       "commandName": "Project",

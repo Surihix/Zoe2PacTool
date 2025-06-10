@@ -15,7 +15,7 @@
             Console.WriteLine("");
             Console.WriteLine("Examples with MARS game code:");
             Console.WriteLine("Zoe2PacTool.exe -mars " + "-u" + @" ""fileName.pac""");
-            Console.WriteLine("Zoe2PacTool.exe -mars " + "-r" + @" ""extractedFolderName"" " + @"""fileName.pac""");
+            Console.WriteLine("Zoe2PacTool.exe -mars " + "-r" + @" ""extractedFolderName"" ");
             Console.WriteLine("");
             Console.ReadLine();
             Environment.Exit(0);
