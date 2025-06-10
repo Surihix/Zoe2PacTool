@@ -12,9 +12,9 @@ Use the following commands with this tool according to the game code:
 <br>
 
 **Important:** The supported game code switches are ```-hd``` and ```-mars```. the first switch is for the Hexadrive updated HD collection version, while the second switch is for the MARS version i.e the PC and PS4 versions of the game. these switches are important and will determine how this tool unpacks or repacks the 
-file. so make sure to specify the correct switch according to the game version from where you got the .pac file.
+file. so make sure to specify the correct switch according to the game version of the .pac file.
 
-**Note:** When repacking a file, you have to provide the extracted folder name as the argument after the ```-r``` switch. remember that the extracted folder should contain all of the files that were extracted from the old .pac file and should also contain the ```!!!pacEntries.json``` file. even if the json file or any one of the extracted files inside the folder is missing, then this tool will stop the repacking process midway. if the repacking succeeds, a new .pac file will be created, while the old .pac file will be renamed with a .old extension.
+**Note:** When repacking a file, you have to provide the extracted folder name as the argument after the ```-r``` switch. remember that the extracted folder should contain all of the files that were extracted from the old .pac file and should also contain the ```!!pacEntries.json``` file. if this json file or any one of the extracted files inside the folder is missing, then this tool will stop the repacking process midway.<br>If the repacking succeeds, a new .pac file will be created, while the old .pac file will be renamed with a .old extension.
 
 ## For Developers:
 Refer to the format structure of the .pac file from [here](FormatStruct.md).
