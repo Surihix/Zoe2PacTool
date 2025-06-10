@@ -2,7 +2,7 @@
   "profiles": {
     "unpack_pc": {
       "commandName": "Project",
-      "commandLineArgs": "-mars -u \"S:\\New folder\\atlas_pc_Zlib.pac\""
+      "commandLineArgs": "-mars -u \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\atlas_pc_jp_Zlib_ps2.pac\""
     },
     "repack_pc": {
       "commandName": "Project",
