@@ -45,14 +45,14 @@ namespace Zoe2PacTool
                 {
                     if (!Directory.Exists(args[2]))
                     {
-                        SharedMethods.ErrorExit("Specified pac file does not exist!");
+                        SharedMethods.ErrorExit("Specified extracted directory does not exist!");
                     }
                 }
                 else
                 {
                     if (!File.Exists(args[2]))
                     {
-                        SharedMethods.ErrorExit("Specified extracted directory does not exist!");
+                        SharedMethods.ErrorExit("Specified pac file does not exist!");
                     }
                 }
 

@@ -38,6 +38,7 @@ namespace Zoe2PacTool.Unpack
                             {
                                 pacEntriesJsonWriter.WriteStartObject();
                                 pacEntriesJsonWriter.WriteString("version", pacStructure.VersionRead);
+                                pacEntriesJsonWriter.WriteNumber("fileCount", pacStructure.FileCount);
                                 pacEntriesJsonWriter.WriteStartArray("files");
 
                                 fileTableReader.BaseStream.Position = 0;
@@ -52,6 +53,7 @@ namespace Zoe2PacTool.Unpack
 
                                     pacEntriesJsonWriter.WriteStartObject();
                                     pacEntriesJsonWriter.WriteString("fileName", pacStructure.FileName);
+                                    pacEntriesJsonWriter.WriteString("extractedName", Path.GetFileName(pacStructure.ExtractedPath));
                                     pacEntriesJsonWriter.WriteString("packedState", pacStructure.PackedState);
                                     pacEntriesJsonWriter.WriteEndObject();
                                 }

@@ -56,7 +56,20 @@ namespace Zoe2PacTool.Support
 
         public static byte[] DeflateCompress(byte[] dataToCmp)
         {
-            var cmpData = new byte[] { };
+            var cmpData = Array.Empty<byte>();
+
+            using (var dataStream = new MemoryStream(dataToCmp))
+            {
+                using (var cmpStream = new MemoryStream())
+                {
+                    using (var compressor = new DeflateStream(cmpStream, CompressionLevel.Optimal, true))
+                    {
+                        dataStream.CopyTo(compressor);
+                    }
+
+                    cmpData = cmpStream.ToArray();
+                }
+            }
 
             return cmpData;
         }
@@ -64,7 +77,20 @@ namespace Zoe2PacTool.Support
 
         public static byte[] ZlibCompress(byte[] dataToCmp)
         {
-            var cmpData = new byte[] { };
+            var cmpData = Array.Empty<byte>();
+
+            using (var dataStream = new MemoryStream(dataToCmp))
+            {
+                using (var cmpStream = new MemoryStream())
+                {
+                    using (var compressor = new ZLibStream(cmpStream, CompressionLevel.Optimal, true))
+                    {
+                        dataStream.CopyTo(compressor);
+                    }
+
+                    cmpData = cmpStream.ToArray();
+                }
+            }
 
             return cmpData;
         }

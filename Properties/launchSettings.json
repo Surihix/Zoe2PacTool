@@ -6,7 +6,7 @@
     },
     "repack_pc": {
       "commandName": "Project",
-      "commandLineArgs": "-mars -r \"S:\\New folder\\atlas_pc_Zlib\" \"S:\\New folder\\atlas_pc_Zlib.pac\""
+      "commandLineArgs": "-mars -r \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\_atlas_pc_Zlib.pac\""
     },
     "unpack_pc_ps2": {
       "commandName": "Project",
@@ -14,7 +14,7 @@
     },
     "repack_pc_ps2": {
       "commandName": "Project",
-      "commandLineArgs": "-mars -r \"S:\\New folder\\atlas_pc_jp_Zlib_ps2\" \"S:\\New folder\\atlas_pc_jp_Zlib_ps2.pac\""
+      "commandLineArgs": "-mars -r \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\_atlas_pc_jp_Zlib_ps2.pac\""
     },
     "unpack_ps4_ps2": {
       "commandName": "Project",
@@ -30,7 +30,7 @@
     },
     "unpack_ps3": {
       "commandName": "Project",
-      "commandLineArgs": "-hd -u \"S:\\New folder\\atlas_ps3_Zlib.pac\""
+      "commandLineArgs": "-hd -u \"G:\\dloaded\\USRDIR\\ZoE2\\atlas\\atlas_ps3_Zlib.pac\""
     },
     "help_test": {
       "commandName": "Project"
