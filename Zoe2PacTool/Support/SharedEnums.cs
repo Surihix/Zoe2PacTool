@@ -2,7 +2,7 @@
 {
     internal class SharedEnums
     {
-        public enum GameVersions
+        public enum GameCodes
         {
             mars,
             hd

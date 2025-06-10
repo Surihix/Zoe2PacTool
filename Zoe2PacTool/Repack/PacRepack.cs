@@ -4,7 +4,7 @@ namespace Zoe2PacTool.Repack
 {
     internal class PacRepack
     {
-        public static void RepackFiles(string extractDir, GameVersions version)
+        public static void RepackFiles(string extractDir, GameCodes version)
         {
 
         }

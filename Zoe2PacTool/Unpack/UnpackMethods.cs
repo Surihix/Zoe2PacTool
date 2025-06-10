@@ -59,7 +59,7 @@ namespace Zoe2PacTool
             Console.WriteLine("Getting filenames....");
             Console.WriteLine("");
 
-            for (uint i = 0; i < pacStructure.FileCount; i++)
+            for (int i = 0; i < pacStructure.FileCount; i++)
             {
                 pacStructure.NamesList.Add(pacReader.ReadBytesString(32, false));
             }
@@ -81,7 +81,7 @@ namespace Zoe2PacTool
         }
 
 
-        public static void UnpackProcess(PacStructure pacStructure, BinaryReader pacReader, SharedEnums.GameVersions gameVersion)
+        public static void UnpackProcess(PacStructure pacStructure, BinaryReader pacReader, SharedEnums.GameCodes gameCode)
         {
             if (pacStructure.FileName.EndsWith("dat"))
             {
@@ -92,7 +92,7 @@ namespace Zoe2PacTool
             {
                 pacReader.BaseStream.Seek(pacStructure.DataOffset1a + pacStructure.DataStart1a, SeekOrigin.Begin);
 
-                if (gameVersion == SharedEnums.GameVersions.hd)
+                if (gameCode == SharedEnums.GameCodes.hd)
                 {
                     pacStructure.PackedState = "Compressed";
                     pacStructure.UnpackedState = "Decompressed";
@@ -141,6 +141,8 @@ namespace Zoe2PacTool
                     pacStructure.ExtractedPath += DeriveDatExtension(dcmpData);
                 }
 
+                SharedMethods.IfFileOrDirExistsDel(pacStructure.ExtractedPath, true);
+
                 using (var outFileStream = new FileStream(pacStructure.ExtractedPath, FileMode.CreateNew, FileAccess.Write))
                 {
                     outFileStream.Write(dcmpData);
@@ -157,6 +159,8 @@ namespace Zoe2PacTool
                     pacStructure.ExtractedPath += DeriveDatExtension(pacReader.ReadBytes(4));
                     pacReader.BaseStream.Position -= 4;
                 }
+
+                SharedMethods.IfFileOrDirExistsDel(pacStructure.ExtractedPath, true);
 
                 using (var outFileStream = new FileStream(pacStructure.ExtractedPath, FileMode.CreateNew, FileAccess.Write))
                 {

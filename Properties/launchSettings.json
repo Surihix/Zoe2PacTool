@@ -34,6 +34,10 @@
     },
     "help_test": {
       "commandName": "Project"
+    },
+    "test": {
+      "commandName": "Project",
+      "commandLineArgs": "-mars -un \"G:\\Steam Library Games\\steamapps\\common\\ZONE OF THE ENDERS THE 2nd RUNNER MARS ANUBIS ZONE OF THE ENDERS MARS\\atlas\\atlas_pc_Zlib.pac\""
     }
   }
 }

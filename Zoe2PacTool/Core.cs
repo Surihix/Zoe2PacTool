@@ -14,21 +14,24 @@ namespace Zoe2PacTool
                 Console.OutputEncoding = System.Text.Encoding.UTF8;
 
                 // Parse args
+                if (args.Length == 1)
+                {
+                    if (args[0].Contains("-h") || args[0].Contains("-?"))
+                    {
+                        Help.ShowAppCommands();
+                    }
+                }
+
                 if (args.Length < 3)
                 {
                     Console.WriteLine("Warning: Enough arguments not specified. Please use -? or -h switches for more information!");
-                    Console.WriteLine("");
+                    Console.ReadLine();
                     Environment.Exit(0);
                 }
 
-                if (args[0].Contains("-h") || args[0].Contains("-?"))
+                if (Enum.TryParse(args[0].Replace("-", ""), false, out SharedEnums.GameCodes gameCode) == false)
                 {
-                    Help.ShowAppCommands();
-                }
-
-                if (Enum.TryParse(args[0].Replace("-", ""), false, out SharedEnums.GameVersions gameVersion) == false)
-                {
-                    Console.WriteLine("Warning: Specified version was invalid!");
+                    Console.WriteLine("Warning: Specified game code was invalid!");
                     Help.ShowAppCommands();
                 }
 
@@ -56,19 +59,25 @@ namespace Zoe2PacTool
                 switch (toolActionSwitch)
                 {
                     case ToolActionSwitches.u:
-                        PacUnpack.UnpackFiles(args[2], gameVersion);
+                        PacUnpack.UnpackFiles(args[2], gameCode);
                         break;
 
                     case ToolActionSwitches.uf:
-                        PacUnpack.UnpackSingle(args[2], gameVersion);
+                        if (args.Length < 4)
+                        {
+                            Console.WriteLine("Warning: Enough arguments not specified for this action. Please use -? or -h switches for more information!");
+                            Console.ReadLine();
+                            Environment.Exit(0);
+                        }
+                        PacUnpack.UnpackSingle(args[2], args[3], gameCode);
                         break;
 
                     case ToolActionSwitches.un:
-                        PacUnpack.UnpackFileNames(args[2], gameVersion);
+                        PacUnpack.UnpackNames(args[2], gameCode);
                         break;
 
                     case ToolActionSwitches.r:
-                        PacRepack.RepackFiles(args[2], gameVersion);
+                        PacRepack.RepackFiles(args[2], gameCode);
                         break;
                 }
 
