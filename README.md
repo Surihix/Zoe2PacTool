@@ -27,5 +27,5 @@ This small program allows you to unpack and repack the .pac archive files that a
 
 - If the repacking succeeds, then a new .pac file will be created while the old .pac file will be renamed with an .old extension.
 
-## For Developers:
+## For Developers
 Refer to the format structure of the .pac file from [here](FormatStruct.md).
