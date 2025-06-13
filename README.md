@@ -15,7 +15,7 @@ This small program allows you to unpack and repack the .pac archive files that a
 <br>
 
 ## Important notes
-- You can run the program with just the `-?` or `-h` switches. for example `Zoe2PacTool -?`
+- To display the help page, run the program with either the `-?` or `-h` switches. for example `CyArchiveTool -?`
 
 - The gamecode switch determines how this program unpacks and repacks the files. so make sure to specify the correct switch according to the game version of the .pac file.
 
